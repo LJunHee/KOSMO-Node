@@ -1,1 +1,1 @@
-console.log("test print...");
+// javascript로 작성

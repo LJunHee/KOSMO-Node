@@ -2,8 +2,8 @@ const path = require('path');
 
 console.log(path.sep,path.delimiter);
 
-const msg = 'd:\\KOSMO-SpringBoot\\..\\.\\KOSMO-SpringBoot\\node01\\ex01.js';
-const msg1 = 'd:\\KOSMO-SpringBoot\\node01\\';
+const msg = 'd:\\KOSMO-Node\\..\\.\\KOSMO-Node\\node01\\ex01.js';
+const msg1 = 'd:\\KOSMO-Node\\node01\\';
 const msg2 = '.\\ex02.js';
 console.log(msg1+msg2);
 console.log(path.resolve(msg1+msg2));
