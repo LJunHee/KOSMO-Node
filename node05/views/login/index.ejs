@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
     <link rel='stylesheet' href='/css/bootstrap.min.css' />
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
@@ -18,19 +17,24 @@
           <li><a href="/">home</a></li>
           <li><a href="/intro">intro</a></li>
           <li><a href="/emp">emp</a></li>
-          <% if(login){%>
-          <li><a href="/logout">logout</a></li>
-          <%}else{%>
           <li><a href="/login">login</a></li>
-          <%}%>
         </ul>
       </div>
     </nav>
     <div class="container">
-      <div class="jumbotron">
-        <h1><%= title %></h1>
-        <p>Welcome to <%= title %></p>
-      </div>
+      <h2 class="page-header">로그인</h2>
+      <form action="/login/" method="post">
+        <div class="form-group">
+          <input type="text" name="deptno" placeholder="deptno" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <input type="text" name="dname" placeholder="dname" class="form-control"/>
+        </div>
+        <div>
+          <button class="btn btn-primary btn-block">로그인</button>
+          <button type="reset" class="btn btn-default btn-block">취소</button>
+        </div>
+      </form>
     </div>
   </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/css/bootstrap.min.css' />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">
+            인제대학교
+          </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="/">home</a></li>
+          <li><a href="/intro">intro</a></li>
+          <li><a href="/emp">emp</a></li>
+          <li><a href="/login">login</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h2 class="page-header">상세내용</h2>
+      <form action="./" method="post">
+        <div class="form-group">
+          <input name="empno" value="<%=EMPNO%>" class="form-control" readonly/>
+        </div>
+        <div class="form-group">
+          <input name="ename" value="<%=ENAME%>" class="form-control" readonly/>
+        </div>
+        <div class="form-group">
+          <input name="sal" value="<%=SAL%>" class="form-control" readonly/>
+        </div>
+        <div class="form-group">
+          <input name="hiredate" value="<%=HIREDATE.toLocaleDateString() %>" class="form-control" disabled/>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn btn-primary btn-block">수정</button>
+          <button type="reset" class="btn btn-default btn-block">취소</button>
+          <button type="button" class="btn btn-default btn-block">뒤로</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
