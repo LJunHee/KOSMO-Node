@@ -3,6 +3,7 @@ const router=express.Router();
 const fs=require('fs');
 
 router.get('/', (req, res) => {
+    console.log(req.session.login);
     res.render('index');
 })
 router.get('/intro', (req, res) => {
@@ -17,7 +18,7 @@ router.get('/intro3', (req, res) => {
 })
 router.get('/download', (req, res) => {
     // const msg=fs.readFileSync('deptController.js',{encoding:'utf-8'});
-    res.sendFile('D:\\KOSMO-Node\\node03\\public\\imgs\\logo.png',e=>console.log(e));
+    res.sendFile('C:\\workspace\\node03\\public\\imgs\\logo.png',e=>console.log(e));
 })
 router.get('/intro4', (req, res) => {
     res.sendStatus(200);
