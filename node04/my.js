@@ -1,4 +1,5 @@
-const mysql = require('mysql')
+// mysql ~ 5.x
+const mysql = require('mysql2')
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'scott',
